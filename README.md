@@ -36,8 +36,8 @@ pip install -r requirements.txt
 
 ```bash
 python inference.py \
-    --audio my_song.mp3 \
-    --checkpoint best_model_mode-song_task-full.pt \
+    --audio /path/to/your/mp3/file \
+    --checkpoint models/best_model.pt \
     --save_json results.json
 ```
 
