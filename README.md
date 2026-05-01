@@ -60,10 +60,7 @@ python extract_embeddings.py \
     --songs_per_batch 50
 ```
 
-The input JSONL file should have one song per line with the following fields:
-```json
-{"id": "song_id", "score_streams": 72.3, "score_likes": 65.1, "platform": "suno"}
-```
+The input JSONL file should have one song per line with ids which maps to the the mp3 file and other required label fields.
 
 Embeddings are saved as Apache Parquet shards in the output folder.
 
