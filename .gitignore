@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.log
+*.egg-info/
+.env
+wandb/
+checkpoints/
+final_split/
+parquets*/
+audio_files/
+udio_audio_files/
+*.jsonl
+apex_upload/
+logs/
