@@ -3,7 +3,7 @@
 [![HuggingFace](https://img.shields.io/badge/🤗%20HuggingFace-Model-yellow)](https://huggingface.co/amaai-lab/apex)
 [![Paper](https://img.shields.io/badge/📄%20Paper-ARXIV-red)]()
 
-APEX is the first large-scale multi-task learning framework for jointly predicting **popularity** and **aesthetic quality** of AI-generated music from audio alone. Trained on over 211k AI-generated songs (~10k hours) from Suno and Udio using frozen [MERT-v1-95M](https://huggingface.co/m-a-p/MERT-v1-95M) audio embeddings.
+APEX is the first large-scale multi-task learning framework for jointly predicting **popularity** and **aesthetic quality** of AI-generated music from audio alone. Trained on over 211k AI-generated songs (~10k hours) from Suno and Udio using [MERT-v1-95M](https://huggingface.co/m-a-p/MERT-v1-95M) audio embeddings.
 
 ![APEX Architecture](architecture.png)
 
