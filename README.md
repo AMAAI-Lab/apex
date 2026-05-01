@@ -47,6 +47,30 @@ The model is also available on 🤗 HuggingFace at [amaai-lab/apex](https://hugg
 
 ## Training
 
+### Step 1: Extract Embeddings
+
+Extract MERT embeddings from your audio files:
+
+```bash
+python extract_embeddings.py \
+    --jsonl_file      your_songs.jsonl \
+    --audio_folder    audio_files/ \
+    --parquet_folder  parquets/ \
+    --num_gpus        4 \
+    --songs_per_batch 50
+```
+
+The input JSONL file should have one song per line with the following fields:
+```json
+{"id": "song_id", "score_streams": 72.3, "score_likes": 65.1, "platform": "suno"}
+```
+
+Embeddings are saved as Apache Parquet shards in the output folder.
+
+---
+
+### Step 2: Train
+
 The training script supports all experimental conditions via command-line arguments:
 
 ```bash
@@ -64,27 +88,25 @@ python train.py \
 | `--loss` | `equal`, `weighted`, `uncertainty` | Loss combination strategy |
 | `--shared` | `2`, `3` | Number of shared FC layers |
 
-This yields **24 experimental conditions** (`2 × 2 × 3 × 2`). For example, to train the best performing configuration:
+This yields **24 experimental conditions** (`2 × 2 × 3 × 2`). To train the best performing configuration:
 
 ```bash
 python train.py --mode song --task full --loss uncertainty --shared 2
 ```
 
 Checkpoints are saved to:
-
 checkpoints/loss-{loss}_shared-{shared}_mode-{mode}_task-{task}/best_model.pt
 
 ---
 
-## Evaluation
+### Step 3: Evaluate
 
 ```bash
 python eval.py \
-    --checkpoint checkpoints/loss-uncertainty_shared-2_mode-song_task-full/best_model.pt \
-    --test_folder final_split/test \
+    --checkpoint    checkpoints/loss-uncertainty_shared-2_mode-song_task-full/best_model.pt \
+    --test_folder   final_split/test \
     --results_folder eval_results
 ```
-
 ---
 
 ## Music Arena Experiment
