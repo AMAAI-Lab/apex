@@ -124,7 +124,7 @@ This project is licensed under the Apache 2.0 License.
 ## Citation
 
 If you used this repository or our models, please cite our work:
-'''bash
+```bash
 @misc{husain2026apexlargescalemultitaskaestheticinformed,
       title={APEX: Large-scale Multi-task Aesthetic-Informed Popularity Prediction for AI-Generated Music}, 
       author={Jaavid Aktar Husain and Dorien Herremans},
@@ -134,4 +134,4 @@ If you used this repository or our models, please cite our work:
       primaryClass={cs.SD},
       url={https://arxiv.org/abs/2605.03395}, 
 }
-'''
+```
