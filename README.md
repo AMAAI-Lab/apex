@@ -118,3 +118,20 @@ The notebook `APEX_arena_experiment.ipynb` contains the out-of-distribution pair
 ## License
 
 This project is licensed under the Apache 2.0 License.
+
+---
+
+## Citation
+
+If you used this repository or our models, please cite our work:
+'''bash
+@misc{husain2026apexlargescalemultitaskaestheticinformed,
+      title={APEX: Large-scale Multi-task Aesthetic-Informed Popularity Prediction for AI-Generated Music}, 
+      author={Jaavid Aktar Husain and Dorien Herremans},
+      year={2026},
+      eprint={2605.03395},
+      archivePrefix={arXiv},
+      primaryClass={cs.SD},
+      url={https://arxiv.org/abs/2605.03395}, 
+}
+'''
