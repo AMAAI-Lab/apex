@@ -123,7 +123,7 @@ This project is licensed under the Apache 2.0 License.
 
 ## Citation
 
-If you used this repository or our models, please cite our work:
+If you used this repository or our model, please cite our work:
 ```bash
 @misc{husain2026apexlargescalemultitaskaestheticinformed,
       title={APEX: Large-scale Multi-task Aesthetic-Informed Popularity Prediction for AI-Generated Music}, 
